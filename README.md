@@ -1,7 +1,7 @@
 ## web-scraping-challenge
 UNC CH BC HW
 
-#Summary:
+Summary:
 The code here first scrapes info regarding mars exploration using pandas methodology in a jupyter notebook.
 Then, similar code is used to create a python function that scrapes the same information to post via flask
 on a website. 
@@ -15,7 +15,7 @@ After running app.py in your terminal, you should be able to open your local dir
 saying "Get New Data!" which will run a new scrape. The website (index.html) will be updated with new images
 and Mars-related article clips and facts from the scrape websites.
 
-#References:
+References:
 
 for render_template/etc. in flask:
 https://flask.palletsprojects.com/en/1.1.x/quickstart/
