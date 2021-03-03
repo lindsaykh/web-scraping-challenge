@@ -24,12 +24,12 @@
       <div class="col-md-12">
         <h2 class="align-items-center">Latest Mars News!</h2>
       </div>
-      
     </div>
+
   </br>
     <div class="row">
       <div class="col-md-12">
-        <h4>{{mars.news_title}}</h4>
+        <h4><i>{{mars.news_title}}</i></h4>
         <p>{{mars.news_p}}</p>
       </div>
     </div>
@@ -37,13 +37,13 @@
   <hr>
     <div class="row">
       <div class="col-md-8 border">
-        <h2 class="">Featured Mars Image</h2> 
+        <h2 class="">Featured Mars Image!</h2> 
         </br>
-        <img class="col-md-12 border" src="{{mars.featured_image_url}}" alt="oh no! where's that Featured Image?">
+        <img class="col-md-12 border" src="{{mars.featured_image}}" alt="oh no! where's that Featured Image? Here {{mars.featured_image}}">
       </div>
       <div class="col-md-4">
-        
-        </br>
+
+                </br>
         <div class="card">
           <h3>Mars Facts</h3>
           {{ mars.mars_facts | safe}}
@@ -57,26 +57,25 @@
       </div>
     </div>
     </br>
-    <div class="row">       
+    <div class="row">
+
             {% for item in mars.hemisphere_images %} 
               <div class="col-6 border">
               </br>
                     <div>
-                      <img width="512 px" height="512 px" src="{{item.image_url}}">
+                      <img width="512 px" height="512 px" src="{{ item.image_url }}">
                     </div>
 
                     <div>
-                      <h4> {{item.title}} </h4>  
-                    </div>
-            
+                      <h4> {{ item.title }} </h4>  
+                    </div>         
               </div>
             {% endfor %}
     </div> 
 
   <hr>
   <footer class="footer">
-    <span class="bottom"></span>
-</footer>
+    <span class="bottom"><i>Hopefully this thing works!</i></span>
+  </footer>
 </body>
-
 </html>

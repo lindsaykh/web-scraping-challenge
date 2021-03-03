@@ -45,11 +45,9 @@ def scrape():
     html = browser.html
     soup = bs(html,'html.parser')
 
-    # grab featured image url from <a tag in appropriate div class
-    featured_image = soup.find('div',class_='SearchResultCard').a['href']
-
-    # append grabbed featured image url to main url to get image url
-    featured_image_url = jpl_url + featured_image
+    # grab the featured image by using beautiful soup find_all 'img' and 'src'
+    # from a brute force approach, index 2 was found to correspond to the appropriate image.
+    featured_image_url = soup.find_all('img')[2]['src']
 
     ### mars facts scrape ###
     # url info
@@ -75,7 +73,7 @@ def scrape():
 
     # use beautiful soup to grab hemisphere images from the main page (all are in collapsible results)
     mars_hemispheres = soup.find('div',class_='collapsible results')
-    mars_item = mars_hemispheres.find('div',class_='item')
+    mars_item = mars_hemispheres.find_all('div',class_='item')
     
     # initialize array
     hemisphere_image_urls = []
@@ -102,12 +100,13 @@ def scrape():
                 print(title)
                 print(image_url)
             
-            # create dictionary for title and url
-            hemisphere_dict={
-                'title': title,
-                'image_url': image_url
-            }
-            hemisphere_image_urls.append(hemisphere_dict)
+                # create dictionary for title and url
+                hemisphere_dict={
+                    'title': title,
+                    'image_url': image_url
+                }
+                hemisphere_image_urls.append(hemisphere_dict)
+        
         except Exception as e:
             # print errors in terminal if they show up
             print(e)
