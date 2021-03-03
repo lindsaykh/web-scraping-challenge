@@ -1,6 +1,8 @@
 ## web-scraping-challenge
 UNC CH BC HW
 
+![final app image](https://user-images.githubusercontent.com/72901101/109745765-5bccd100-7ba2-11eb-917c-9f8865cea948.png)
+
 Summary:
 The code here first scrapes info regarding mars exploration using pandas methodology in a jupyter notebook.
 Then, similar code is used to create a python function that scrapes the same information to post via flask
@@ -24,3 +26,7 @@ for comparison/overall help:
 https://github.com/goldenb85/web-scraping-challenge/blob/master/Missions_to_Mars/templates/index.html
 
 
+
+![marsattacks-aliens-arrival](https://user-images.githubusercontent.com/72901101/109745909-84ed6180-7ba2-11eb-8ba9-0444a719a561.jpg)
+
+https://www.slashfilm.com/the-quarantine-stream-mars-attacks-proves-tim-burton-didnt-always-need-a-gothic-circus-to-have-fun/
